@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-	cout << "It is Sevruk Uladislav" << endl;
+	cout << "It is Sevruk Vladislav" << endl;
 	return 0;
 }
 
