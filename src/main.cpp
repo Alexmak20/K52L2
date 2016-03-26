@@ -1,5 +1,9 @@
-int main() 
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
 {
- return 0;
+	cout << "It is Sevruk Vladislav" << endl;
+	return 0;
 }
 
