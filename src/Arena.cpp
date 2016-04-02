@@ -10,3 +10,11 @@ Arena::Arena()
 Arena::~Arena()
 {
 }
+
+void Arena::startWorking()
+{
+	while (true)
+	{
+
+	}
+}
