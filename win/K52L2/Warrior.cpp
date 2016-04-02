@@ -1,0 +1,23 @@
+#include "Warrior.h"
+
+
+
+Warrior::Warrior()
+	: Unit(50, 40, 10)
+{
+	
+}
+
+
+Warrior::~Warrior()
+{
+}
+
+void Warrior::Do(Unit& unit) {
+	if (getHealth() < 15) {
+		heal();
+	}
+	else {
+		hit();
+	}
+};
