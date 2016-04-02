@@ -142,23 +142,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Alexmak.cpp" />
     <ClCompile Include="..\..\src\Arena.cpp" />
+    <ClCompile Include="..\..\src\Loner.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\unit.cpp" />
-
-    <ClCompile Include="Loner.cpp" />
-
-    <ClCompile Include="Warrior.cpp" />
-
+    <ClCompile Include="..\..\src\Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\Alexmak.h" />
     <ClInclude Include="..\..\src\Arena.h" />
+    <ClInclude Include="..\..\src\Loner.h" />
     <ClInclude Include="..\..\src\unit.h" />
-
-    <ClInclude Include="Loner.h" />
-
-    <ClInclude Include="Warrior.h" />
-
+    <ClInclude Include="..\..\src\Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

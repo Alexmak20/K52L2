@@ -1,5 +1,5 @@
 #pragma once
-#include "C:\Users\Валерий\Documents\GitHub\K52L2\src\unit.h"
+#include "unit.h"
 class Warrior :
 	public Unit
 {
