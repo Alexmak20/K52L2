@@ -18,6 +18,6 @@ void Warrior::Do(Unit& unit) {
 		heal();
 	}
 	else {
-		hit();
+		hit(unit);
 	}
 };
