@@ -26,6 +26,10 @@ public:
     void hit(Unit &enemy);
     virtual void Do(Unit& unit) = 0;
 
+    int getArmor();
+    int getAttack();
+    int getFullHpValue();
+    int getEnemyArmor(Unit &enemy); //Look at your enemy armor
     int getHealth();
     std::string getUnitName();
 
