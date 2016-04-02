@@ -25,7 +25,7 @@ void Arena::StartDuel()
 		currentRound++;	//	Счетчик раундов
 		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
 	}
-	if (duel.front().getHealth() <= 0) std::count << "duel.back().getName" << " Wins" << endl;
+	if (duel.front().getHealth() <= 0) { std::cout << "duel.back().getName" << " Wins" << std::endl; }
 }
 
 
