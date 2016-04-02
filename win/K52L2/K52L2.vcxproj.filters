@@ -27,16 +27,26 @@
     <ClCompile Include="Alexmak.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Arena.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+
     <ClInclude Include="..\..\src\unit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Arena.h">
+
+    <ClInclude Include="Warrior.h">
+
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Alexmak.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Arena.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
