@@ -10,6 +10,14 @@ Unit::Unit(int h, int attack, int armor)
     armor_ = armor;
 }
 
-void Unit::hit() { }
+void Unit::hit(Unit &enemy) {
+
+    int dmg = (attack_ - enemy.armor_);
+    int minDmg = attack_*(minDamagePercent/100.0);
+    if (dmg < minDmg){
+        dmg = minDmg;
+    }
+    enemy.h_ = enemy.h_ - dmg;
+}
 
 void Unit::heal() { }
