@@ -5,9 +5,9 @@
 class Unit
 {
 private:
-    int h;
-    int attack;
-    int armor;
+    int h_;
+    int attack_;
+    int armor_;
 public:
     Unit(int h, int attack, int armor);
     void heal();
