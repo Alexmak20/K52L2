@@ -17,10 +17,15 @@ void Arena::StartDuel()
 {
 	currentRound = 0;
 	isFirstPlayerTurn = true;
-	while (duel.front().getHealth > 0 && duel.back().getHealth() > 0)
+	while (duel.front().getHealth() > 0 && duel.back().getHealth() > 0)
 	{
-
+		//	Проверяем какой юнит ходит и вызываем его метод Do(юнит споерник)
+		if (isFirstPlayerTurn) duel.front().Do(duel.back());
+		else duel.back().Do(duel.front());
+		currentRound++;	//	Счетчик раундов
+		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
 	}
+	if (duel.front().getHealth() <= 0) std::count << "duel.back().getName" << " Wins" << endl;
 }
 
 
