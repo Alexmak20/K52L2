@@ -12,7 +12,7 @@ public:
     Unit(int h, int attack, int armor);
     void heal();
     void hit();
-    virtual Do(Unit& unit) = 0;
+    virtual void Do(Unit& unit) = 0;
     int getHealth();
 
 };
