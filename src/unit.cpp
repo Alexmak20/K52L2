@@ -2,7 +2,7 @@
 
 Unit::Unit(int h, int attack, int armor)
 {
-    if ((h + attack + armor) > 100) {
+    if ((h + attack + armor) > maxHP) {
         throw "Wrong sum of properties";
     }
     h_ = h;
@@ -20,4 +20,12 @@ void Unit::hit(Unit &enemy) {
     enemy.h_ = enemy.h_ - dmg;
 }
 
-void Unit::heal() { }
+void Unit::heal() {
+    int new_h = h_ + healBaseValue;
+    if (new_h > maxHP) {
+        h_ = new_h;
+    }
+    else {
+        h_ = new_h;
+    }
+}
