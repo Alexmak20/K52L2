@@ -3,25 +3,31 @@
 #include <iostream>
 #include <stdio.h>
 
-#include <list>
+#include <queue>
 #include <iterator>
+
+#include "unit.h"
+
 
 using namespace std;
 
 class Arena
 {
 private:
-	list<int> Queue;	//	Очередь на бой
-	list<int> Duel;	//	Текущий бой
-	int currentRound;	//	Текущий раунд
+	queue<Unit> arenaQueue;	//	Очередь на бой
+	queue<Unit> duel;	//	Текущий бой
+	int currentRound = 0;	//	Текущий раунд
+	bool isFirstPlayerTurn = true;	//	Ходит первый игрок?
 
 public:
 	Arena();
 	~Arena();
 
 
-	void addUnit();
-	void startWorking();
+	void AddUnit(Unit &unit);	//	Добавление юнита в очередь арены
+
+	void StartDuel();	//	Старт дуэли
+	void StartWorking();	//	Старт арены: Основной рабочий цикл
 
 };
 
