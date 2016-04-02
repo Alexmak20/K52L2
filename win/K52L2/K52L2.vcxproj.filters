@@ -21,6 +21,9 @@
     <ClCompile Include="..\..\src\unit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\Arena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -32,11 +35,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Warrior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\unit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Arena.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Loner.h">
       <Filter>Header Files</Filter>

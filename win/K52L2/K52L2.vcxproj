@@ -145,12 +145,20 @@
     <ClCompile Include="..\..\src\Arena.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\unit.cpp" />
+
     <ClCompile Include="Loner.cpp" />
+
+    <ClCompile Include="Warrior.cpp" />
+
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Arena.h" />
     <ClInclude Include="..\..\src\unit.h" />
+
     <ClInclude Include="Loner.h" />
+
+    <ClInclude Include="Warrior.h" />
+
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
