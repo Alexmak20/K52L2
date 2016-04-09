@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Arena.h"
-
+#include "Alexmak.h"
+#include "Loner.h"
+#include "Warrior.h"
 
 using namespace std;
 
@@ -20,7 +22,7 @@ int main()
 			<< "1 - Add new Hero to epic Arena \n"
 			<< "2 - Start epic Arena \n"
 			<< "0 - Exit from the depths of hell \n"
-			<< endl;
+			"Your choise: ";
 
 		std::cin >> switcher;
 
@@ -28,9 +30,34 @@ int main()
 		{
 		case 1:
 			system("cls");
-			std::cout << "Choose your hero:\n";
+			std::cout << "Choose your hero:\n" <<
+				"1 - AlexMak\n" <<
+				"2 - Loner\n" <<
+				"3 - Warrior\n" <<
+				"0 - Back\n" <<
+				"Your choise: ";
 
+			std::cin >> switcher;
 
+			switch (switcher)
+			{
+			case 1:
+				//arena.AddUnit(new Alexmak());
+				break;
+			case 2:
+				//arena.AddUnit(new Loner());
+				break;
+			case 3:
+				//arena.AddUnit(new Warrior());
+				break;
+			case 0:
+				continue;
+				break;
+			default:
+				system("cls");
+				std::cout << "Inccorrect input. Try again!\n";
+				break;
+			}
 			break;
 		case 2:
 			system("cls");
