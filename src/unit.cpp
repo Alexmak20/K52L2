@@ -16,8 +16,6 @@ Unit::Unit(int h, int attack, int armor, std::string name) {
     unitName_ = name;
 }
 
-Unit::Unit(int h, int attack, int armor):Unit(h, attack, armor, "Nameless") { }
-
 
 void Unit::hit(Unit &enemy) {
 

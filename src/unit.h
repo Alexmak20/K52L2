@@ -19,13 +19,12 @@ private:
     const int sumOfPoints = 100;
 
 public:
-    Unit(int h, int attack, int armor);
-    Unit(int h, int attack, int armor, std::string name);
+    Unit(int h, int attack, int armor, std::string name = "Nameless");
     virtual ~Unit() { }
 
     void heal();
     void hit(Unit &enemy);
-    virtual void Do(Unit& unit) = 0;
+    virtual void Do(Unit* unit) = 0;
     //virtual void Do(std::shared_ptr<Unit> unit) = 0;
 
     int getArmor();
