@@ -17,7 +17,7 @@ void Loner::Do(Unit& unit)
 		heal();
 	}
 	else {
-		hit();
+		hit(unit);
 	}
 
 }
