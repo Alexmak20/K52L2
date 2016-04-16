@@ -146,6 +146,7 @@
     <ClCompile Include="..\..\src\Arena.cpp" />
     <ClCompile Include="..\..\src\Loner.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Menu.cpp" />
     <ClCompile Include="..\..\src\unit.cpp" />
     <ClCompile Include="..\..\src\Warrior.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="..\..\src\Alexmak.h" />
     <ClInclude Include="..\..\src\Arena.h" />
     <ClInclude Include="..\..\src\Loner.h" />
+    <ClInclude Include="..\..\src\Menu.h" />
     <ClInclude Include="..\..\src\unit.h" />
     <ClInclude Include="..\..\src\Warrior.h" />
   </ItemGroup>

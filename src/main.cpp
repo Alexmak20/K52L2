@@ -3,14 +3,35 @@
 #include "Alexmak.h"
 #include "Loner.h"
 #include "Warrior.h"
+#include "Menu.h"
+
 
 using namespace std;
 
+void stdWelcome()
+{
+	std::cout << "Welcome!" << " Choose a menu: \n"
+		<< "1 - Add new Hero to epic Arena \n"
+		<< "2 - Start epic Arena \n"
+		<< "0 - Exit from the depths of hell \n"
+		"Your choise: ";
+}
+
+void stdChooseHero()
+{
+	std::cout << "Choose your hero:\n" <<
+		"1 - AlexMak\n" <<
+		"2 - Loner\n" <<
+		"3 - Warrior\n" <<
+		"0 - Back\n" <<
+		"Your choise: ";
+}
 
 int main()
 {
 
 	//
+	Menu mainMenu;
 	Arena arena;
 
 	int switcher = 0;
@@ -18,35 +39,42 @@ int main()
 
 	while (!exited) {
 		system("cls");
-		stdWelcome();
+		mainMenu.stdWelcome();
 
 		std::cin >> switcher;
 
 		switch (switcher)
 		{
 		case 1:
+		{
 			system("cls");
-			stdChooseHero();
+			mainMenu.stdChooseHero();
 
 			std::cin >> switcher;
 
 			switch (switcher)
 			{
-			case 1:
-				//Alexmak newUunit;
-				//arena.AddUnit(newUunit);
-				//std::cout << newUunit.getUnitName() << " added.\n";
+			case 1: {
+				Alexmak newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
-			case 2:
-				//Loner newUunit;
-				//arena.AddUnit(newUunit);
-				//std::cout << newUunit.getUnitName() << " added.\n";
+			}
+			case 2: {
+				Loner newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
-			case 3:
-				//Warrior newUunit;
-				//arena.AddUnit(newUunit);
-				//std::cout << newUunit.getUnitName() << " added.\n";
+			}
+			case 3: {
+				Warrior newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
+			}
 			case 0:
 				continue;
 				break;
@@ -56,6 +84,7 @@ int main()
 				break;
 			}
 			break;
+		}
 		case 2:
 			system("cls");
 			std::cout << "Let's begin!\n";
@@ -78,21 +107,4 @@ int main()
 	return 0;
 }
 
-void stdWelcome()
-{
-	std::cout << "Welcome!" << " Choose a menu: \n"
-		<< "1 - Add new Hero to epic Arena \n"
-		<< "2 - Start epic Arena \n"
-		<< "0 - Exit from the depths of hell \n"
-		"Your choise: ";
-}
 
-void stdChooseHero()
-{
-	std::cout << "Choose your hero:\n" <<
-		"1 - AlexMak\n" <<
-		"2 - Loner\n" <<
-		"3 - Warrior\n" <<
-		"0 - Back\n" <<
-		"Your choise: ";
-}

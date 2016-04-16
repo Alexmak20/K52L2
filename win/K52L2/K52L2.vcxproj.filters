@@ -19,6 +19,9 @@
     <ClCompile Include="..\..\src\Warrior.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Menu.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Alexmak.h">
@@ -34,6 +37,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Warrior.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Menu.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
