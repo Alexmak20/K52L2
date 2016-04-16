@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F5CC7141CA680B000FCA0DF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F5CC7131CA680B000FCA0DF /* main.cpp */; };
+		7F16C53F1CC2276200A2A2F9 /* Alexmak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5321CC2276200A2A2F9 /* Alexmak.cpp */; };
+		7F16C5401CC2276200A2A2F9 /* Arena.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5341CC2276200A2A2F9 /* Arena.cpp */; };
+		7F16C5411CC2276200A2A2F9 /* Loner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5361CC2276200A2A2F9 /* Loner.cpp */; };
+		7F16C5421CC2276200A2A2F9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5381CC2276200A2A2F9 /* main.cpp */; };
+		7F16C5431CC2276200A2A2F9 /* terminator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5391CC2276200A2A2F9 /* terminator.cpp */; };
+		7F16C5441CC2276200A2A2F9 /* unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C53B1CC2276200A2A2F9 /* unit.cpp */; };
+		7F16C5451CC2276200A2A2F9 /* Warrior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C53D1CC2276200A2A2F9 /* Warrior.cpp */; };
+		7F16C5481CC2279200A2A2F9 /* Edgar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F16C5461CC2279200A2A2F9 /* Edgar.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F16C5321CC2276200A2A2F9 /* Alexmak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Alexmak.cpp; path = ../../src/Alexmak.cpp; sourceTree = "<group>"; };
+		7F16C5331CC2276200A2A2F9 /* Alexmak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alexmak.h; path = ../../src/Alexmak.h; sourceTree = "<group>"; };
+		7F16C5341CC2276200A2A2F9 /* Arena.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Arena.cpp; path = ../../src/Arena.cpp; sourceTree = "<group>"; };
+		7F16C5351CC2276200A2A2F9 /* Arena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Arena.h; path = ../../src/Arena.h; sourceTree = "<group>"; };
+		7F16C5361CC2276200A2A2F9 /* Loner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Loner.cpp; path = ../../src/Loner.cpp; sourceTree = "<group>"; };
+		7F16C5371CC2276200A2A2F9 /* Loner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Loner.h; path = ../../src/Loner.h; sourceTree = "<group>"; };
+		7F16C5381CC2276200A2A2F9 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../src/main.cpp; sourceTree = "<group>"; };
+		7F16C5391CC2276200A2A2F9 /* terminator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = terminator.cpp; path = ../../src/terminator.cpp; sourceTree = "<group>"; };
+		7F16C53A1CC2276200A2A2F9 /* terminator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = terminator.h; path = ../../src/terminator.h; sourceTree = "<group>"; };
+		7F16C53B1CC2276200A2A2F9 /* unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unit.cpp; path = ../../src/unit.cpp; sourceTree = "<group>"; };
+		7F16C53C1CC2276200A2A2F9 /* unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unit.h; path = ../../src/unit.h; sourceTree = "<group>"; };
+		7F16C53D1CC2276200A2A2F9 /* Warrior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Warrior.cpp; path = ../../src/Warrior.cpp; sourceTree = "<group>"; };
+		7F16C53E1CC2276200A2A2F9 /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Warrior.h; path = ../../src/Warrior.h; sourceTree = "<group>"; };
+		7F16C5461CC2279200A2A2F9 /* Edgar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edgar.cpp; sourceTree = "<group>"; };
+		7F16C5471CC2279200A2A2F9 /* Edgar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Edgar.hpp; sourceTree = "<group>"; };
 		7F5CC7091CA6805800FCA0DF /* QWE */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QWE; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F5CC7131CA680B000FCA0DF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../GitHub/K52L2/src/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +78,21 @@
 		7F5CC70B1CA6805800FCA0DF /* QWE */ = {
 			isa = PBXGroup;
 			children = (
-				7F5CC7131CA680B000FCA0DF /* main.cpp */,
+				7F16C5321CC2276200A2A2F9 /* Alexmak.cpp */,
+				7F16C5331CC2276200A2A2F9 /* Alexmak.h */,
+				7F16C5341CC2276200A2A2F9 /* Arena.cpp */,
+				7F16C5351CC2276200A2A2F9 /* Arena.h */,
+				7F16C5361CC2276200A2A2F9 /* Loner.cpp */,
+				7F16C5371CC2276200A2A2F9 /* Loner.h */,
+				7F16C5381CC2276200A2A2F9 /* main.cpp */,
+				7F16C5391CC2276200A2A2F9 /* terminator.cpp */,
+				7F16C53A1CC2276200A2A2F9 /* terminator.h */,
+				7F16C53B1CC2276200A2A2F9 /* unit.cpp */,
+				7F16C53C1CC2276200A2A2F9 /* unit.h */,
+				7F16C53D1CC2276200A2A2F9 /* Warrior.cpp */,
+				7F16C53E1CC2276200A2A2F9 /* Warrior.h */,
+				7F16C5461CC2279200A2A2F9 /* Edgar.cpp */,
+				7F16C5471CC2279200A2A2F9 /* Edgar.hpp */,
 			);
 			path = QWE;
 			sourceTree = "<group>";
@@ -118,7 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5CC7141CA680B000FCA0DF /* main.cpp in Sources */,
+				7F16C5451CC2276200A2A2F9 /* Warrior.cpp in Sources */,
+				7F16C53F1CC2276200A2A2F9 /* Alexmak.cpp in Sources */,
+				7F16C5431CC2276200A2A2F9 /* terminator.cpp in Sources */,
+				7F16C5401CC2276200A2A2F9 /* Arena.cpp in Sources */,
+				7F16C5421CC2276200A2A2F9 /* main.cpp in Sources */,
+				7F16C5481CC2279200A2A2F9 /* Edgar.cpp in Sources */,
+				7F16C5411CC2276200A2A2F9 /* Loner.cpp in Sources */,
+				7F16C5441CC2276200A2A2F9 /* unit.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +279,7 @@
 				7F5CC7121CA6805800FCA0DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
