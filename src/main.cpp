@@ -3,13 +3,14 @@
 #include "Alexmak.h"
 #include "Loner.h"
 #include "Warrior.h"
+#include <locale.h>
 
 using namespace std;
 
 
 int main()
 {
-
+	setlocale(LC_ALL, "Russian");
 	//
 	Arena arena;
 
