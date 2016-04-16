@@ -4,6 +4,7 @@
 #include "Loner.h"
 #include "Warrior.h"
 #include "Menu.h"
+#include "Edgar.hpp"
 
 
 using namespace std;
@@ -106,5 +107,3 @@ int main()
 	system("pause");
 	return 0;
 }
-
-
