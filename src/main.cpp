@@ -18,11 +18,7 @@ int main()
 
 	while (!exited) {
 		system("cls");
-		std::cout << "Welcome!" << " Choose a menu: \n"
-			<< "1 - Add new Hero to epic Arena \n"
-			<< "2 - Start epic Arena \n"
-			<< "0 - Exit from the depths of hell \n"
-			"Your choise: ";
+		stdWelcome();
 
 		std::cin >> switcher;
 
@@ -30,25 +26,26 @@ int main()
 		{
 		case 1:
 			system("cls");
-			std::cout << "Choose your hero:\n" <<
-				"1 - AlexMak\n" <<
-				"2 - Loner\n" <<
-				"3 - Warrior\n" <<
-				"0 - Back\n" <<
-				"Your choise: ";
+			stdChooseHero();
 
 			std::cin >> switcher;
 
 			switch (switcher)
 			{
 			case 1:
-				//arena.AddUnit(new Alexmak());
+				//Alexmak newUunit;
+				//arena.AddUnit(newUunit);
+				//std::cout << newUunit.getUnitName() << " added.\n";
 				break;
 			case 2:
-				//arena.AddUnit(new Loner());
+				//Loner newUunit;
+				//arena.AddUnit(newUunit);
+				//std::cout << newUunit.getUnitName() << " added.\n";
 				break;
 			case 3:
-				//arena.AddUnit(new Warrior());
+				//Warrior newUunit;
+				//arena.AddUnit(newUunit);
+				//std::cout << newUunit.getUnitName() << " added.\n";
 				break;
 			case 0:
 				continue;
@@ -79,4 +76,23 @@ int main()
 
 	system("pause");
 	return 0;
+}
+
+void stdWelcome()
+{
+	std::cout << "Welcome!" << " Choose a menu: \n"
+		<< "1 - Add new Hero to epic Arena \n"
+		<< "2 - Start epic Arena \n"
+		<< "0 - Exit from the depths of hell \n"
+		"Your choise: ";
+}
+
+void stdChooseHero()
+{
+	std::cout << "Choose your hero:\n" <<
+		"1 - AlexMak\n" <<
+		"2 - Loner\n" <<
+		"3 - Warrior\n" <<
+		"0 - Back\n" <<
+		"Your choise: ";
 }
