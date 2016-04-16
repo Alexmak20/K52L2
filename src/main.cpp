@@ -3,15 +3,36 @@
 #include "Alexmak.h"
 #include "Loner.h"
 #include "Warrior.h"
-#include "Edgar.hpp"
+#include "Menu.h"
+//#include "Edgar.hpp"
+
 
 using namespace std;
 
+void stdWelcome()
+{
+	std::cout << "Welcome!" << " Choose a menu: \n"
+		<< "1 - Add new Hero to epic Arena \n"
+		<< "2 - Start epic Arena \n"
+		<< "0 - Exit from the depths of hell \n"
+		"Your choise: ";
+}
+
+void stdChooseHero()
+{
+	std::cout << "Choose your hero:\n" <<
+		"1 - AlexMak\n" <<
+		"2 - Loner\n" <<
+		"3 - Warrior\n" <<
+		"0 - Back\n" <<
+		"Your choise: ";
+}
 
 int main()
 {
 
 	//
+	Menu mainMenu;
 	Arena arena;
 
 	int switcher = 0;
@@ -19,43 +40,53 @@ int main()
 
 	while (!exited) {
 		system("cls");
-		std::cout << "Welcome!" << " Choose a menu: \n"
-			<< "1 - Add new Hero to epic Arena \n"
-			<< "2 - Start epic Arena \n"
-			<< "0 - Exit from the depths of hell \n"
-			"Your choise: ";
+		mainMenu.stdWelcome();
 
 		std::cin >> switcher;
 
 		switch (switcher)
 		{
 		case 1:
+		{
 			system("cls");
-			std::cout << "Choose your hero:\n" <<
-				"1 - AlexMak\n" <<
-				"2 - Loner\n" <<
-				"3 - Warrior\n" <<
-                "4 - Edgar\n" <<
-				"0 - Back\n" <<
-				"Your choise: ";
+			mainMenu.stdChooseHero();
 
 			std::cin >> switcher;
 
 			switch (switcher)
 			{
-			case 1:
-				//arena.AddUnit(new Alexmak());
+			case 1: {
+				Alexmak newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
-			case 2:
-				//arena.AddUnit(new Loner());
+			}
+			case 2: {
+				Loner newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
-			case 3:
-				//arena.AddUnit(new Warrior());
+			}
+			case 3: {
+				Warrior newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
 				break;
+			}
 			case 4:
-                //arena.AddUnit(new Edgar());
-                    break;
-            case 0:
+			{
+				/*
+				Edgar newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
+				break;
+				*/
+			}
+			case 0:
 				continue;
 				break;
 			default:
@@ -64,6 +95,7 @@ int main()
 				break;
 			}
 			break;
+		}
 		case 2:
 			system("cls");
 			std::cout << "Let's begin!\n";
