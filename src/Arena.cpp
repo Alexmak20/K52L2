@@ -20,9 +20,8 @@ void Arena::StartDuel()
     while (duel.front()->getHealth() > 0 && duel.back()->getHealth() > 0)
 	{
 		//	Проверяем какой юнит ходит и вызываем его метод Do(юнит споерник)
-        if (isFirstPlayerTurn) duel.front()->Do(*duel.back());
-		//TODO fix error in the line above
-        else duel.back()->Do(*duel.front());
+        if (isFirstPlayerTurn) duel.front()->Do(duel.back());
+        else duel.back()->Do(duel.front());
 		currentRound++;	//	Счетчик раундов
 		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
 	}

@@ -14,7 +14,7 @@ Warrior::~Warrior()
 }
 
 void Warrior::Do(Unit& unit) {
-	if ((getHealth() < 15) && (unit.getHealth()>30)) {
+	if ((getHealth() < 15) && (unit.getHealth()>40)) {
 		heal();
 	}
 	else {
