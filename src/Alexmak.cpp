@@ -3,7 +3,7 @@
 
 
 Alexmak::Alexmak() : Unit(45,45,10)
-	
+
 {
 }
 
@@ -20,6 +20,6 @@ void Alexmak::Do(Unit& unit)
 	}
 	else
 	{
-		hit();
+		hit(unit);
 	}
 }
