@@ -4,7 +4,7 @@
 #include "Loner.h"
 #include "Warrior.h"
 #include "Menu.h"
-#include "Edgar.hpp"
+//#include "Edgar.hpp"
 
 
 using namespace std;
@@ -75,6 +75,16 @@ int main()
 				std::cout << newUunit.getUnitName() << " added.\n";
 				system("pause");
 				break;
+			}
+			case 4:
+			{
+				/*
+				Edgar newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
+				break;
+				*/
 			}
 			case 0:
 				continue;
