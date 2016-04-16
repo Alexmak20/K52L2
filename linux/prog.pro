@@ -6,7 +6,7 @@ CONFIG -= qt
 
 @
 VPATH += ../src/
-SOURCES += main.cpp unit.cpp# Arena.cpp
-HEADERS += unit.h #Arena.h
+SOURCES += main.cpp unit.cpp Arena.cpp terminator.cpp #Alexmak.cpp
+HEADERS += unit.h Arena.h terminator.h #Alexmak.h
 @
 
