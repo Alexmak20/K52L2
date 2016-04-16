@@ -3,6 +3,7 @@
 #include "Alexmak.h"
 #include "Loner.h"
 #include "Warrior.h"
+#include "Edgar.hpp"
 
 using namespace std;
 
@@ -34,6 +35,7 @@ int main()
 				"1 - AlexMak\n" <<
 				"2 - Loner\n" <<
 				"3 - Warrior\n" <<
+                "4 - Edgar\n" <<
 				"0 - Back\n" <<
 				"Your choise: ";
 
@@ -50,7 +52,10 @@ int main()
 			case 3:
 				//arena.AddUnit(new Warrior());
 				break;
-			case 0:
+			case 4:
+                //arena.AddUnit(new Edgar());
+                    break;
+            case 0:
 				continue;
 				break;
 			default:
