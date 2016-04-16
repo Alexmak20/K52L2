@@ -25,25 +25,36 @@ void Arena::StartDuel()
 		currentRound++;	//	Счетчик раундов
 		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
 	}
-    if (duel.front()->getHealth() <= 0) { std::cout << "duel.back().getName" << " Wins" << std::endl; }
-	else { std::cout << "duel.front().getName" << " Wins" << std::endl; }
+    if (duel.front()->getHealth() <= 0)
+	{
+		MESSAGE_DUEL_ENDS(duel, false, currentRound);
+	}
+	else
+	{
+		MESSAGE_DUEL_ENDS(duel, true, currentRound);
+	}
 }
 
 
 void Arena::StartWorking()
 {
-	while (true)
+	MESSAGE_ARENA_STARTS();
+	while (arenaQueue.size() > 1)
 	{
-		if (arenaQueue.size() > 1)
-		{
 			//	Добавляем двух бойцов из очереди на дуэль
 			duel.push(arenaQueue.front());
 			arenaQueue.pop();
 			duel.push(arenaQueue.front());
 			arenaQueue.pop();
+			MESSAGE_DUEL_STARTS(duel);
 			StartDuel();
-		}
+			numberOfDuels++;
 	}
+}
+
+int Arena::getNumberOfDuels()
+{
+	return Arena::numberOfDuels;
 }
 
 void Arena::MESSAGE_DUEL_STARTS(queue<Unit*> _duel)
@@ -52,18 +63,18 @@ void Arena::MESSAGE_DUEL_STARTS(queue<Unit*> _duel)
               << " и " << _duel.back()->getUnitName() << " началась!" << endl;
 }
 
-void Arena::MESSAGE_ARENA_STARTS(queue<Unit*> _arenaQueue)
+void Arena::MESSAGE_ARENA_STARTS()
 {
     std::cout << "Арена начинает работу. Приглашаем вас всех героев, ищущих славы, проверить свои боевые навыки!";
 }
 
-void Arena::MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin)
+void Arena::MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round)
 {
     std::cout << "Дуэль между " << _duel.front()->getUnitName()
               << " и " << _duel.back()->getUnitName()
               << " закончилась победой "
               << (isFirstWin ? _duel.front()->getUnitName() : _duel.back()->getUnitName())
-                              << ". Поздравляем!" << endl;
+                              << " в " << round << " раунде. Поздравляем!" << endl;
 }
 
 
