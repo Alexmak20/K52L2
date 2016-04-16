@@ -28,8 +28,8 @@ void Menu::stdChooseHero()
 		"1 - AlexMak\n" <<
 		"2 - Loner\n" <<
 		"3 - Warrior\n" <<
-		"4 - Edgar" <<
-		"5 - terminator" <<
+		"4 - Edgar\n" <<
+		"5 - terminator\n" <<
 		"0 - Back\n" <<
 		"Your choise: ";
 }
