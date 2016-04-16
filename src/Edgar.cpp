@@ -6,13 +6,14 @@
 //  Copyright © 2016 Egor Yanukovich. All rights reserved.
 //
 
-#include "Edgar.hpp"
+#include "Edgar.h"
+
 
 
 
 Edgar::Edgar(): Unit(40, 40, 20)
 {
-    
+
 }
 
 

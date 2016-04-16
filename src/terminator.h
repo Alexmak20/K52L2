@@ -7,7 +7,7 @@ class terminator : public Unit
 {
 public:
     terminator();
-     void Do(Unit* unit);
+     void Do(Unit& unit);
 };
 
 #endif // TERMINATOR_H
