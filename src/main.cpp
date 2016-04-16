@@ -59,16 +59,14 @@ int main()
 				system("pause");
 				break;
 			}
-			case 4:
-			{
+			case 4:{
 				Edgar newUunit;
 				arena.AddUnit(&newUunit);
 				std::cout << newUunit.getUnitName() << " added.\n";
 				system("pause");
 				break;
 			}
-			case 5:
-			{
+			case 5:{
 				terminator newUunit;
 				arena.AddUnit(&newUunit);
 				std::cout << newUunit.getUnitName() << " added.\n";
@@ -76,11 +74,11 @@ int main()
 				break;
 			}
 			case 0:
-				continue;
 				break;
 			default:
 				system("cls");
 				std::cout << "Inccorrect input. Try again!\n";
+				system("pause");
 				break;
 			}
 			break;
@@ -88,7 +86,13 @@ int main()
 		case 2:
 			system("cls");
 			std::cout << "Let's begin!\n";
+			system("pause");
 			arena.StartWorking();
+			break;
+		case 3:
+			system("cls");
+			std::cout << "Our brave heroes: \n";
+			//TODO arena show heroes
 			break;
 		case 0:
 			system("cls");
@@ -98,6 +102,7 @@ int main()
 		default:
 			system("cls");
 			std::cout << "Inccorrect input. Try again!\n";
+			system("pause");
 			break;
 
 		}
