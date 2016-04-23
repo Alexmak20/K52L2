@@ -24,7 +24,7 @@ public:
 
     void heal();
     void hit(Unit &enemy);
-    virtual void Do(Unit* unit) = 0;
+    virtual void Do(Unit& unit) = 0;
     //virtual void Do(std::shared_ptr<Unit> unit) = 0;
 
     int getArmor();

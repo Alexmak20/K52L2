@@ -144,17 +144,25 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\Alexmak.cpp" />
     <ClCompile Include="..\..\src\Arena.cpp" />
+    <ClCompile Include="..\..\src\Edgar.cpp" />
     <ClCompile Include="..\..\src\Loner.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Menu.cpp" />
+    <ClCompile Include="..\..\src\terminator.cpp" />
     <ClCompile Include="..\..\src\unit.cpp" />
     <ClCompile Include="..\..\src\Warrior.cpp" />
+    <ClCompile Include="..\..\src\Xela.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Alexmak.h" />
     <ClInclude Include="..\..\src\Arena.h" />
+    <ClInclude Include="..\..\src\Edgar.h" />
     <ClInclude Include="..\..\src\Loner.h" />
+    <ClInclude Include="..\..\src\Menu.h" />
+    <ClInclude Include="..\..\src\terminator.h" />
     <ClInclude Include="..\..\src\unit.h" />
     <ClInclude Include="..\..\src\Warrior.h" />
+    <ClInclude Include="..\..\src\Xela.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
