@@ -5,6 +5,7 @@
 
 #include <queue>
 #include <iterator>
+#include <string>
 
 #include "unit.h"
 
@@ -19,6 +20,9 @@ private:
 	int currentRound = 0;												//	Текущий раунд
 	int numberOfDuels = 0;												//	Current number of fight on Arena
 	bool isFirstPlayerTurn = true;										//	Ходит первый игрок?
+    void message_hp_duel(queue<Unit*> _duel);
+    void message_round(int n);
+    std::string getUnitHpStatus(Unit* unit);
 
 public:
 	Arena();

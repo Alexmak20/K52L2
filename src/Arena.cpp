@@ -35,6 +35,9 @@ void Arena::StartDuel()
 	isFirstPlayerTurn = true;
     while (duel.front()->getHealth() > 0 && duel.back()->getHealth() > 0)
 	{
+        message_round(currentRound);
+        message_hp_duel(duel);
+        std::cin.ignore();
 		//	Проверяем какой юнит ходит и вызываем его метод Do(юнит споерник)
         if (isFirstPlayerTurn) duel.front()->Do(*duel.back());
 		//TODO fix error in the line above
@@ -45,6 +48,7 @@ void Arena::StartDuel()
     if (duel.front()->getHealth() <= 0)
 	{
 		MESSAGE_DUEL_ENDS(duel, false, currentRound);
+        message_hp_duel(duel);
 	}
 	else
 	{
@@ -92,6 +96,23 @@ void Arena::MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round)
               << " закончилась победой "
               << (isFirstWin ? _duel.front()->getUnitName() : _duel.back()->getUnitName())
                               << " в " << round << " раунде. Поздравляем!" << endl;
+}
+
+void Arena::message_hp_duel(queue<Unit*> _duel) {
+    Unit* unit1 = _duel.front();
+    Unit* unit2 = _duel.back();
+    std::cout << "HP -- " << getUnitHpStatus(unit1) << " vs " <<
+                 getUnitHpStatus(unit2) << "\n";
+}
+
+std::string Arena::getUnitHpStatus(Unit* unit) {
+    string s = unit->getUnitName() + ": " + std::to_string(unit->getHealth()) +
+                 "/" + std::to_string(unit->getFullHpValue());
+    return s;
+}
+
+void Arena::message_round(int n) {
+    std::cout << "Раунд " << std::to_string(n) << " начался.\n";
 }
 
 
