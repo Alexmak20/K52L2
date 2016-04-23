@@ -45,14 +45,14 @@ void Arena::StartDuel()
 		currentRound++;	//	Счетчик раундов
 		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
 	}
+    message_hp_duel(duel);
     if (duel.front()->getHealth() <= 0)
 	{
-		MESSAGE_DUEL_ENDS(duel, false, currentRound);
-        message_hp_duel(duel);
+        MESSAGE_DUEL_ENDS(duel, false, currentRound);
 	}
 	else
 	{
-		MESSAGE_DUEL_ENDS(duel, true, currentRound);
+        MESSAGE_DUEL_ENDS(duel, true, currentRound);
 	}
 }
 
