@@ -1,3 +1,9 @@
+#ifdef _WIN32
+#define CLEAR "cls"
+#else //In any other OS
+#define CLEAR "clear"
+#endif
+
 #include <iostream>
 #include <locale.h>
 #include "Arena.h"
@@ -22,7 +28,7 @@ int main()
 	bool exited = 0;
 
 	while (!exited) {
-		system("cls");
+		system(CLEAR);
 		mainMenu.stdWelcome();
 
 		std::cin >> switcher;
@@ -31,7 +37,7 @@ int main()
 		{
 		case 1:
 		{
-			system("cls");
+			system(CLEAR);
 			mainMenu.stdChooseHero();
 
 			std::cin >> switcher;
@@ -84,23 +90,23 @@ int main()
 			break;
 		}
 		case 2:
-			system("cls");
+			system(CLEAR);
 			std::cout << "Let's begin!\n";
 			system("pause");
 			arena.StartWorking();
 			break;
 		case 3:
-			system("cls");
+			system(CLEAR);
 			std::cout << "Our brave heroes: \n";
 			//TODO arena show heroes
 			break;
 		case 0:
-			system("cls");
+			system(CLEAR);
 			std::cout << "Goodbye, goodluck!\n";
 			exited = true;
 			break;
 		default:
-			system("cls");
+			system(CLEAR);
 			std::cout << "Inccorrect input. Try again!\n";
 			system("pause");
 			break;
