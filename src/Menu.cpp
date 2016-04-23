@@ -31,6 +31,7 @@ void Menu::stdChooseHero()
 		<<	"3 - Warrior\n"
 		<<	"4 - Edgar\n"
 		<<	"5 - terminator\n"
+		<<  "6 - Xela\n"
 		<<	"0 - Back\n"
 		<<	"Your choise: ";
 }
