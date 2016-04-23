@@ -46,45 +46,45 @@ int main()
 			switch (switcher)
 			{
 			case 1: {
-				Alexmak newUunit;
-				arena.AddUnit(&newUunit);
-                std::cout << newUunit.getUnitName() << " added.\n";
+				Alexmak* newUunit = new Alexmak();
+				arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
                 std::cin.ignore().get();
 				break;
 			}
 			case 2: {
-				Loner newUunit;
-				arena.AddUnit(&newUunit);
-                std::cout << newUunit.getUnitName() << " added.\n";
+				Loner* newUunit = new Loner();
+				arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
                 std::cin.ignore().get();
 				break;
 			}
 			case 3: {
-				Warrior newUunit;
-				arena.AddUnit(&newUunit);
-                std::cout << newUunit.getUnitName() << " added.\n";
+				Warrior* newUunit = new Warrior();
+				arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
                 std::cin.ignore().get();
 				break;
 			}
 			case 4:{
-				Edgar newUunit;
-				arena.AddUnit(&newUunit);
-                std::cout << newUunit.getUnitName() << " added.\n";
+				Edgar* newUunit = new Edgar();
+				arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
                 std::cin.ignore().get();
 				break;
 			}
 			case 5:{
-				terminator newUunit;
-				arena.AddUnit(&newUunit);
-                std::cout << newUunit.getUnitName() << " added.\n";
+				terminator* newUunit = new terminator();
+				arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
                 std::cin.ignore().get();
 				break;
 			}
 			case 6: {
-				Xela newUunit;
-				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+				Xela* newUunit = new Xela();
+				arena.AddUnit(newUunit);
+				std::cout << newUunit->getUnitName() << " added.\n";
+				std::cin.ignore().get();
 				break;
 			}
 
@@ -107,7 +107,9 @@ int main()
 		case 3:
 			system(CLEAR);
 			std::cout << "Our brave heroes: \n";
-			//TODO arena show heroes
+			arena.ShowHeroes();
+			std::cout << "Press any key for continie";
+			std::cin.ignore().get();
 			break;
 		case 0:
 			system(CLEAR);

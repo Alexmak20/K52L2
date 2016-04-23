@@ -2,7 +2,7 @@
 
 
 
-Alexmak::Alexmak() : Unit(45,45,10)
+Alexmak::Alexmak() : Unit(45,45,10, "Alexmak")
 
 {
 }

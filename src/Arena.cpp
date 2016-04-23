@@ -13,6 +13,22 @@ Arena::~Arena()
 }
 
 
+void Arena::ShowHeroes()
+{
+	queue<Unit*> temp = arenaQueue;
+
+	if (temp.empty()) std::cout << "Arena is empty. Sorry\n";
+	else
+	{
+		std::cout << "There are " << temp.size() << " brave hero(es):\n";
+		while (!temp.empty())
+		{
+			std::cout << temp.front()->getUnitName() << " with attack " << temp.front()->getAttack() << endl;
+			temp.pop();
+		}
+	}
+}
+
 void Arena::StartDuel()
 {
 	currentRound = 0;
@@ -53,7 +69,7 @@ void Arena::StartWorking()
 	}
 }
 
-int Arena::getNumberOfDuels()
+int Arena::GetNumberOfDuels()
 {
 	return Arena::numberOfDuels;
 }

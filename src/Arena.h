@@ -29,7 +29,14 @@ public:
 
 	void StartDuel();													//	Старт дуэли
 	void StartWorking();												//	Старт арены: Основной рабочий цикл
-	int getNumberOfDuels();
+	void ShowHeroes();
+
+
+	//	getters
+	int GetNumberOfDuels();
+
+	//	setters
+
 
 	//	Messages
     static void MESSAGE_DUEL_STARTS(queue<Unit*> _duel);					//	Сообщение о начале дуэли
