@@ -84,7 +84,7 @@ int main()
 				Xela newUunit;
 				arena.AddUnit(&newUunit);
 				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cin.ignore().get();
 				break;
 			}
 
