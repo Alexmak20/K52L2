@@ -28,6 +28,9 @@
     <ClCompile Include="..\..\src\Edgar.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Xela.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Alexmak.h">
@@ -52,6 +55,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Edgar.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Xela.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

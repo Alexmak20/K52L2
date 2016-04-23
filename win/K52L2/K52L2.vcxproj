@@ -151,6 +151,7 @@
     <ClCompile Include="..\..\src\terminator.cpp" />
     <ClCompile Include="..\..\src\unit.cpp" />
     <ClCompile Include="..\..\src\Warrior.cpp" />
+    <ClCompile Include="..\..\src\Xela.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Alexmak.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="..\..\src\terminator.h" />
     <ClInclude Include="..\..\src\unit.h" />
     <ClInclude Include="..\..\src\Warrior.h" />
+    <ClInclude Include="..\..\src\Xela.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
