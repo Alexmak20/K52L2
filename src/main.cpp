@@ -29,7 +29,7 @@ int main()
 	bool exited = 0;
 
 	while (!exited) {
-		system(CLEAR);
+        system(CLEAR);
 		mainMenu.stdWelcome();
 
 		std::cin >> switcher;
@@ -42,52 +42,34 @@ int main()
 			mainMenu.stdChooseHero();
 
 			std::cin >> switcher;
+            Unit* newUunit = nullptr;
 
 			switch (switcher)
 			{
 			case 1: {
-				Alexmak* newUunit = new Alexmak();
-				arena.AddUnit(newUunit);
-                std::cout << newUunit->getUnitName() << " added.\n";
-                std::cin.ignore().get();
+                newUunit = new Alexmak();
 				break;
 			}
 			case 2: {
-				Loner* newUunit = new Loner();
-				arena.AddUnit(newUunit);
-                std::cout << newUunit->getUnitName() << " added.\n";
-                std::cin.ignore().get();
+                newUunit = new Loner();
 				break;
 			}
 			case 3: {
-				Warrior* newUunit = new Warrior();
-				arena.AddUnit(newUunit);
-                std::cout << newUunit->getUnitName() << " added.\n";
-                std::cin.ignore().get();
+                newUunit = new Warrior();
 				break;
 			}
 			case 4:{
-				Edgar* newUunit = new Edgar();
-				arena.AddUnit(newUunit);
-                std::cout << newUunit->getUnitName() << " added.\n";
-                std::cin.ignore().get();
+                newUunit = new Edgar();
 				break;
 			}
 			case 5:{
-				terminator* newUunit = new terminator();
-				arena.AddUnit(newUunit);
-                std::cout << newUunit->getUnitName() << " added.\n";
-                std::cin.ignore().get();
+                newUunit = new terminator();
 				break;
 			}
 			case 6: {
-				Xela* newUunit = new Xela();
-				arena.AddUnit(newUunit);
-				std::cout << newUunit->getUnitName() << " added.\n";
-				std::cin.ignore().get();
+                newUunit = new Xela();
 				break;
 			}
-
 			case 0:
 				break;
 			default:
@@ -96,6 +78,11 @@ int main()
                 std::cin.ignore().get();
 				break;
 			}
+            if (newUunit != nullptr) {
+                arena.AddUnit(newUunit);
+                std::cout << newUunit->getUnitName() << " added.\n";
+                std::cin.ignore().get();
+            }
 			break;
 		}
 		case 2:
