@@ -14,21 +14,21 @@ using namespace std;
 class Arena
 {
 private:
-    queue<Unit*> arenaQueue;											//	Очередь на бой
-    queue<Unit*> duel;													//	Текущий бой
-	int currentRound = 0;												//	Текущий раунд
+    queue<Unit*> arenaQueue;											//	РћС‡РµСЂРµРґСЊ РЅР° Р±РѕР№
+    queue<Unit*> duel;													//	РўРµРєСѓС‰РёР№ Р±РѕР№
+	int currentRound = 0;												//	РўРµРєСѓС‰РёР№ СЂР°СѓРЅРґ
 	int numberOfDuels = 0;												//	Current number of fight on Arena
-	bool isFirstPlayerTurn = true;										//	Ходит первый игрок?
+	bool isFirstPlayerTurn = true;										//	РҐРѕРґРёС‚ РїРµСЂРІС‹Р№ РёРіСЂРѕРє?
 
 public:
 	Arena();
 	~Arena();
 
 
-    void AddUnit(Unit *unit);											//	Добавление юнита в очередь арены
+    void AddUnit(Unit *unit);											//	Р”РѕР±Р°РІР»РµРЅРёРµ СЋРЅРёС‚Р° РІ РѕС‡РµСЂРµРґСЊ Р°СЂРµРЅС‹
 
-	void StartDuel();													//	Старт дуэли
-	void StartWorking();												//	Старт арены: Основной рабочий цикл
+	void StartDuel();													//	РЎС‚Р°СЂС‚ РґСѓСЌР»Рё
+	void StartWorking();												//	РЎС‚Р°СЂС‚ Р°СЂРµРЅС‹: РћСЃРЅРѕРІРЅРѕР№ СЂР°Р±РѕС‡РёР№ С†РёРєР»
 	void ShowHeroes();
 
 
@@ -39,8 +39,8 @@ public:
 
 
 	//	Messages
-    static void MESSAGE_DUEL_STARTS(queue<Unit*> _duel);					//	Сообщение о начале дуэли
-    static void MESSAGE_ARENA_STARTS();										//	Сообщение о начале работы арены
-    static void MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round);	//	Сообщение об окончании дуэли с выводом результатов
+    static void MESSAGE_DUEL_STARTS(queue<Unit*> _duel);					//	РЎРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°С‡Р°Р»Рµ РґСѓСЌР»Рё
+    static void MESSAGE_ARENA_STARTS();										//	РЎРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°С‡Р°Р»Рµ СЂР°Р±РѕС‚С‹ Р°СЂРµРЅС‹
+    static void MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round);	//	РЎРѕРѕР±С‰РµРЅРёРµ РѕР± РѕРєРѕРЅС‡Р°РЅРёРё РґСѓСЌР»Рё СЃ РІС‹РІРѕРґРѕРј СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
 
 };

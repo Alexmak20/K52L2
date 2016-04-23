@@ -35,12 +35,12 @@ void Arena::StartDuel()
 	isFirstPlayerTurn = true;
     while (duel.front()->getHealth() > 0 && duel.back()->getHealth() > 0)
 	{
-		//	Проверяем какой юнит ходит и вызываем его метод Do(юнит споерник)
+		//	РџСЂРѕРІРµСЂСЏРµРј РєР°РєРѕР№ СЋРЅРёС‚ С…РѕРґРёС‚ Рё РІС‹Р·С‹РІР°РµРј РµРіРѕ РјРµС‚РѕРґ Do(СЋРЅРёС‚ СЃРїРѕРµСЂРЅРёРє)
         if (isFirstPlayerTurn) duel.front()->Do(*duel.back());
 		//TODO fix error in the line above
         else duel.back()->Do(*duel.front());
-		currentRound++;	//	Счетчик раундов
-		isFirstPlayerTurn = !isFirstPlayerTurn;	// Передаем ход другому игроку
+		currentRound++;	//	РЎС‡РµС‚С‡РёРє СЂР°СѓРЅРґРѕРІ
+		isFirstPlayerTurn = !isFirstPlayerTurn;	// РџРµСЂРµРґР°РµРј С…РѕРґ РґСЂСѓРіРѕРјСѓ РёРіСЂРѕРєСѓ
 	}
     if (duel.front()->getHealth() <= 0)
 	{
@@ -58,7 +58,7 @@ void Arena::StartWorking()
 	MESSAGE_ARENA_STARTS();
 	while (arenaQueue.size() > 1)
 	{
-			//	Добавляем двух бойцов из очереди на дуэль
+			//	Р”РѕР±Р°РІР»СЏРµРј РґРІСѓС… Р±РѕР№С†РѕРІ РёР· РѕС‡РµСЂРµРґРё РЅР° РґСѓСЌР»СЊ
 			duel.push(arenaQueue.front());
 			arenaQueue.pop();
 			duel.push(arenaQueue.front());
@@ -76,22 +76,22 @@ int Arena::GetNumberOfDuels()
 
 void Arena::MESSAGE_DUEL_STARTS(queue<Unit*> _duel)
 {
-    std::cout << "Дуэль между " << _duel.front()->getUnitName()
-              << " и " << _duel.back()->getUnitName() << " началась!" << endl;
+    std::cout << "Р”СѓСЌР»СЊ РјРµР¶РґСѓ " << _duel.front()->getUnitName()
+              << " Рё " << _duel.back()->getUnitName() << " РЅР°С‡Р°Р»Р°СЃСЊ!" << endl;
 }
 
 void Arena::MESSAGE_ARENA_STARTS()
 {
-    std::cout << "Арена начинает работу. Приглашаем вас всех героев, ищущих славы, проверить свои боевые навыки!";
+    std::cout << "РђСЂРµРЅР° РЅР°С‡РёРЅР°РµС‚ СЂР°Р±РѕС‚Сѓ. РџСЂРёРіР»Р°С€Р°РµРј РІР°СЃ РІСЃРµС… РіРµСЂРѕРµРІ, РёС‰СѓС‰РёС… СЃР»Р°РІС‹, РїСЂРѕРІРµСЂРёС‚СЊ СЃРІРѕРё Р±РѕРµРІС‹Рµ РЅР°РІС‹РєРё!";
 }
 
 void Arena::MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round)
 {
-    std::cout << "Дуэль между " << _duel.front()->getUnitName()
-              << " и " << _duel.back()->getUnitName()
-              << " закончилась победой "
+    std::cout << "Р”СѓСЌР»СЊ РјРµР¶РґСѓ " << _duel.front()->getUnitName()
+              << " Рё " << _duel.back()->getUnitName()
+              << " Р·Р°РєРѕРЅС‡РёР»Р°СЃСЊ РїРѕР±РµРґРѕР№ "
               << (isFirstWin ? _duel.front()->getUnitName() : _duel.back()->getUnitName())
-                              << " в " << round << " раунде. Поздравляем!" << endl;
+                              << " РІ " << round << " СЂР°СѓРЅРґРµ. РџРѕР·РґСЂР°РІР»СЏРµРј!" << endl;
 }
 
 
