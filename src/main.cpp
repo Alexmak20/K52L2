@@ -89,7 +89,6 @@ int main()
 			system(CLEAR);
 			std::cout << "Let's begin!\n";
             std::cin.ignore().get();
-            arena.MESSAGE_ARENA_STARTS();
 			arena.StartWorking();
             std::cin.ignore().get();
 			break;
