@@ -13,6 +13,7 @@
 #include "Menu.h"
 #include "Edgar.h"
 #include "terminator.h"
+#include "Xela.h"
 
 
 using namespace std;
@@ -79,6 +80,14 @@ int main()
 				system("pause");
 				break;
 			}
+			case 6: {
+				Xela newUunit;
+				arena.AddUnit(&newUunit);
+				std::cout << newUunit.getUnitName() << " added.\n";
+				system("pause");
+				break;
+			}
+
 			case 0:
 				break;
 			default:
