@@ -20,9 +20,9 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "Russian");
 	Menu mainMenu;
-	Arena arena;
+    Arena arena;
 
 	int switcher = 0;
 	bool exited = 0;
@@ -47,44 +47,44 @@ int main()
 			case 1: {
 				Alexmak newUunit;
 				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cout << newUunit.getUnitName() << " added.\n";
+                std::cin.ignore().get();
 				break;
 			}
 			case 2: {
 				Loner newUunit;
 				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cout << newUunit.getUnitName() << " added.\n";
+                std::cin.ignore().get();
 				break;
 			}
 			case 3: {
 				Warrior newUunit;
 				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cout << newUunit.getUnitName() << " added.\n";
+                std::cin.ignore().get();
 				break;
 			}
 			case 4:{
 				Edgar newUunit;
 				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cout << newUunit.getUnitName() << " added.\n";
+                std::cin.ignore().get();
 				break;
 			}
 			case 5:{
 				terminator newUunit;
 				arena.AddUnit(&newUunit);
-				std::cout << newUunit.getUnitName() << " added.\n";
-				system("pause");
+                std::cout << newUunit.getUnitName() << " added.\n";
+                std::cin.ignore().get();
 				break;
 			}
-			case 0:
+            case 0:
 				break;
 			default:
-				system("cls");
-				std::cout << "Inccorrect input. Try again!\n";
-				system("pause");
+                system(CLEAR);
+                std::cout << "Inccorrect input. Try again!\n";
+                std::cin.ignore().get();
 				break;
 			}
 			break;
@@ -92,7 +92,7 @@ int main()
 		case 2:
 			system(CLEAR);
 			std::cout << "Let's begin!\n";
-			system("pause");
+            std::cin.ignore().get();
 			arena.StartWorking();
 			break;
 		case 3:
@@ -108,12 +108,12 @@ int main()
 		default:
 			system(CLEAR);
 			std::cout << "Inccorrect input. Try again!\n";
-			system("pause");
+            std::cin.ignore().get();
 			break;
 
 		}
 	}
 
-	system("pause");
+    std::cin.ignore().get();
 	return 0;
 }
