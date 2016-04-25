@@ -15,7 +15,7 @@ Arena::~Arena()
 
 void Arena::ShowHeroes()
 {
-	queue<Unit*> temp = arenaQueue;
+    std::queue<Unit*> temp = arenaQueue;
 
 	if (temp.empty()) std::cout << "Arena is empty. Sorry\n";
 	else
@@ -23,7 +23,7 @@ void Arena::ShowHeroes()
 		std::cout << "There are " << temp.size() << " brave hero(es):\n";
 		while (!temp.empty())
 		{
-			std::cout << temp.front()->getUnitName() << " with attack " << temp.front()->getAttack() << endl;
+            std::cout << temp.front()->getUnitName() << " with attack " << temp.front()->getAttack() << std::endl;
 			temp.pop();
 		}
 	}
@@ -78,10 +78,10 @@ int Arena::GetNumberOfDuels()
 	return Arena::numberOfDuels;
 }
 
-void Arena::MESSAGE_DUEL_STARTS(queue<Unit*> _duel)
+void Arena::MESSAGE_DUEL_STARTS(std::queue<Unit*> _duel)
 {
     std::cout << "Дуэль между " << _duel.front()->getUnitName()
-              << " и " << _duel.back()->getUnitName() << " началась!" << endl;
+              << " и " << _duel.back()->getUnitName() << " началась!" << std::endl;
 }
 
 void Arena::MESSAGE_ARENA_STARTS()
@@ -89,16 +89,16 @@ void Arena::MESSAGE_ARENA_STARTS()
     std::cout << "Арена начинает работу. Приглашаем вас всех героев, ищущих славы, проверить свои боевые навыки!";
 }
 
-void Arena::MESSAGE_DUEL_ENDS(queue<Unit*> _duel, bool isFirstWin, int round)
+void Arena::MESSAGE_DUEL_ENDS(std::queue<Unit*> _duel, bool isFirstWin, int round)
 {
     std::cout << "Дуэль между " << _duel.front()->getUnitName()
               << " и " << _duel.back()->getUnitName()
               << " закончилась победой "
               << (isFirstWin ? _duel.front()->getUnitName() : _duel.back()->getUnitName())
-                              << " в " << round << " раунде. Поздравляем!" << endl;
+                              << " в " << round << " раунде. Поздравляем!" << std::endl;
 }
 
-void Arena::message_hp_duel(queue<Unit*> _duel) {
+void Arena::message_hp_duel(std::queue<Unit*> _duel) {
     Unit* unit1 = _duel.front();
     Unit* unit2 = _duel.back();
     std::cout << "HP -- " << getUnitHpStatus(unit1) << " vs " <<
@@ -106,7 +106,7 @@ void Arena::message_hp_duel(queue<Unit*> _duel) {
 }
 
 std::string Arena::getUnitHpStatus(Unit* unit) {
-    string s = unit->getUnitName() + ": " + std::to_string(unit->getHealth()) +
+    std::string s = unit->getUnitName() + ": " + std::to_string(unit->getHealth()) +
                  "/" + std::to_string(unit->getFullHpValue());
     return s;
 }
